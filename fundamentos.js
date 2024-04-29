@@ -134,5 +134,22 @@ console.log(somaPrecos);
   //Promisses (async/await)
 
 
-  
 
+/** JavaScript é Single Thread não bloqueante */
+
+/**Promises */
+const minhaPromessa = new Promise((resolve, reject) => {
+    const nome  = "pedro"
+
+    if (nome === "joão"){
+        resolve('Usuário joão encontrado.')
+    } else {
+        reject('Usuário joão não encontrado.')
+    }
+})
+
+minhaPromessa.then((dado) => {
+    console.log(dado)
+}).catch ((erro) => {
+    console.log('Aconteceu um erro ' + erro)
+})
